@@ -6,6 +6,9 @@
     bottom: 30px;
     right: 30px;
 }
+.cbicon:hover{
+    cursor: pointer;
+}
 
 .modal {
     width: 150vb;
@@ -28,6 +31,7 @@
     border-radius: 20px;
 }
 .close:hover{
+    cursor: pointer;
     background-color: red;
 }
 .chat-border{
@@ -57,4 +61,37 @@
     right: 2%;
     width: 5%;
     height: 37px;
+}
+
+.chat-submit:hover{
+    cursor: pointer;
+}
+
+.message-holder{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    max-height: 70vh;
+}
+
+.user{
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 0px 10px 10px;
+    margin: 10px;
+    width: 50%;
+    text-align: right;
+    place-self: flex-end;
+}
+
+.bot{
+    background-color: #ddd;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0px;
+    margin: 10px;
+    width: 50%;
+    place-self: flex-start;
+    text-align: left;
 }

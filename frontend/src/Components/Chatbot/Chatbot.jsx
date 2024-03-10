@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Popup from 'reactjs-popup';
 import './Chatbot.css'
-import chat from '../utils/chat';
+import chat from '../../utils/chat';
 
 const Chatbot = () => {
     const [value, setvalue] = useState('');
@@ -25,7 +25,7 @@ const Chatbot = () => {
                             <div className='chatmain'>
                                 <button onClick={() => close()} className='close'>x</button>
                                 <div className='chat-border'>
-                                    <div>
+                                    <div className='message-holder'>
                                         {
                                             messages.map((msg, index) => {
                                                 return (
@@ -51,15 +51,3 @@ const Chatbot = () => {
 }
 
 export default Chatbot
-
-
-
-
-
-
-
-
-
-
-
-

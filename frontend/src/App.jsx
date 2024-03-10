@@ -1,6 +1,6 @@
 import './App.css'
-import Home from './Components/Home'
-import Chatbot from './Components/Chatbot'
+import Home from "./Components/Home/Home";
+import Chatbot from './Components/Chatbot/Chatbot';
 import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:8000/'
@@ -10,7 +10,7 @@ axios.defaults.headers = {
 function App() {
   return (
     <div>
-      <Home/>
+      <Home />
       <Chatbot/>
     </div>
   );
