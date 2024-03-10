@@ -1,0 +1,60 @@
+.cbicon {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.modal {
+    width: 150vb;
+    height: 80vh;
+    padding: 1vh;
+    background-color: rgb(45,45,45);
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #ddd ;
+}
+
+.close {
+    background-color: rgb(45,45,45);
+    float: right;
+    font-size: 20px;
+    position: relative;
+    top: -1vh;
+    right: -1vh;
+    color: white;
+    border: rgb(45,45,45) solid;
+    border-radius: 20px;
+}
+.close:hover{
+    background-color: red;
+}
+.chat-border{
+    top: 100px;
+    width: 150vb;
+    height: 80vh;
+}
+.chat-input {
+    background-color: black;
+    color: #ddd;
+    position: absolute;
+    bottom: 20px;
+    left: 2%;
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.chat-submit {
+    border: black solid;
+    border-radius: 5px;
+    background-color: rgb(0,0,0);
+    color: #ddd;
+    position: absolute;
+    bottom: 19px;
+    right: 2%;
+    width: 5%;
+    height: 37px;
+}
