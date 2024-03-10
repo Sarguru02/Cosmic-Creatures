@@ -16,3 +16,8 @@ def addItem(request):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+@api_view(['POST'])
+def chat(request):
+    prompt = request.data['prompt']
+
