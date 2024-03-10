@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from app.models import Item
+from base.models import Item
 
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
