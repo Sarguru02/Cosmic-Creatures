@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import Popup from 'reactjs-popup';
 import './Chatbot.css'
-import Axiosinstance from './Axiosinstance';
+import chat from '../utils/chat';
 
 const Chatbot = () => {
     const [value, setvalue] = useState('');
-    function handlesubmit(e) {
-        e.preventDefault();
-        console.log(value)
+    const [messages, setMessages] = useState([]);
 
-    Axiosinstance.post('chat/', {
-        'name':value
-    })
-        
+    async function handlesubmit(e) {
+        e.preventDefault();
+        setMessages(prev => [...prev, { message: value, type: 'user' }, { message: '...', type: 'bot' }]);
+        console.log(messages)
+        const reply = await chat(value);
+        setMessages(prev => [...prev.filter(msg => msg.message !== "..."), { message: reply, type: 'bot' }]);
     }
-    function handleValue(e) {
-        setvalue(e.target.value);
-    }
+
+
     return (
         <div className='Chatbot'>
             <Popup trigger={<button className='cbicon'>click</button>} modal nested>
@@ -27,10 +26,18 @@ const Chatbot = () => {
                                 <button onClick={() => close()} className='close'>x</button>
                                 <div className='chat-border'>
                                     <div>
-
+                                        {
+                                            messages.map((msg, index) => {
+                                                return (
+                                                    <div key={index} className={msg.type}>
+                                                        {msg.message}
+                                                    </div>
+                                                )
+                                            })
+                                        }
                                     </div>
                                     <form className='chat' onSubmit={handlesubmit}>
-                                        <input type='text' className='chat-input' placeholder='Type Something' onChange={handleValue} ></input>
+                                        <input type='text' className='chat-input' placeholder='Type Something' onChange={(e) => setvalue(e.target.value)} ></input>
                                         <button className='chat-submit' type='submit' >Submit</button>
                                     </form>
                                 </div>
