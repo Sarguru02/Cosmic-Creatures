@@ -6,20 +6,21 @@ h1.heading{
   font-weight: 800;
 }
 
-.signup-flex-container {
+.flex-container {
   width: 100vw;
+  height: 100vh;
   margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.signup-content-container {
+.content-container {
   width: 500px;
   height: 350px;
 }
 
-.signup-form-container {
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,13 +36,13 @@ h1.heading{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
 }
 
-.signup-subtitle {
+.subtitle {
   font-size: 11px;
 
   color: rgba(177, 177, 177, 0.3);
 }
 
-input.signup-input-type {
+input.input-type {
   border: none;
   border-bottom: solid rgb(143, 143, 143) 1px;
 
@@ -54,7 +55,7 @@ input.signup-input-type {
   width: 300px;
 }
 
-input.signup-input-type.submit-btn {
+input.input-type.submit-btn {
   cursor: pointer;
 
   border: none;

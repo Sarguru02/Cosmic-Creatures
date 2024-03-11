@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css';
 import Chatbot from '../Chatbot/Chatbot';
 import { useNavigate } from 'react-router-dom';
 import AqiComponent from '../AqiComponent/AqiComponent';
+import '../../utils/calculate.js';
+import { calculateBike, calculateDieselCar, calculatePetrolCar } from '../../utils/calculate.js';
 const Home = () => {
     const navigate = useNavigate();
+    const [vehicleType, setVehicleType] = useState('bike');
+    const [distance, setDistance] = useState(0);
+    const [engineSize, setEngineSize] = useState('small');
+    const [footprint, setFootprint] = useState();
+
+    const calculate = (e) => {
+        e.preventDefault();
+        if (vehicleType === "bike")
+            var ans = calculateBike(distance, engineSize)
+        if (vehicleType === "petrol-car")
+            var ans = calculatePetrolCar(distance, engineSize)
+        if (vehicleType === "diesel-car")
+            var ans = calculateDieselCar(distance, engineSize)
+        setFootprint(()=> ans);
+    }
 
     const login = () => navigate('/login');
     const signup = () => navigate('/signup');
@@ -51,6 +68,25 @@ const Home = () => {
                 <hr /><hr />
                 <div className='body'>
                     <div className='calc'>
+                        <form onSubmit={calculate}>
+                            <label htmlFor="vehicle-type">Select Vehicle Type:</label>
+                            <select id="vehicle-type" onChange={(e) => setVehicleType(() => e.target.value)}>
+                                <option value="bike">Bike</option>
+                                <option value="petrol-car">Petrol Car</option>
+                                <option value="diesel-car">Diesel Car</option>
+                            </select>
+                            <label htmlFor="distance">Enter Distance (in km):</label>
+                            <input type="number" id="distance" value={distance} onChange={e => setDistance(() => e.target.value)} placeholder="Enter distance..." />
+                            <br /><br />
+                            <label htmlFor="engine-size">Select Engine Size (for cars only):</label>
+                            {(vehicleType === "petrol-car" || vehicleType === "diesel-car")&& <select id="engine-size" onChange={e => setEngineSize(() => e.target.value)}>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>}
+                            <button className='calc-submit'>Submit</button>
+                        </form>
+                        <p className='calc-ans'>{footprint && footprint} g CO2/km</p>
                     </div>
                     <div className='facts'>
                         <div>
