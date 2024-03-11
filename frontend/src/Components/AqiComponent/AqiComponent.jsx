@@ -20,11 +20,11 @@ const AqiComponent = () => {
     }
   };
 
-  useEffect(() => {
-    if (stationId.trim() !== '') {
-      fetchData();
-    }
-  }, [apiKey, stationId]);
+  // useEffect(() => {
+  //   if (stationId.trim() !== '') {
+  //     fetchData();
+  //   }
+  // }, [apiKey, stationId]);
 
   return (
     <div className='aqicomp'>
@@ -37,10 +37,11 @@ const AqiComponent = () => {
         onChange={(e) => setStationId(e.target.value)}
         placeholder="Enter City Name"
       />
+      <button type="button" onClick={fetchData} className='aqi-submit'>Get Data</button>
       {aqiValue !== null ? (
         <p style={{color:'#fff'}} className='aqi-value'>AQI: {aqiValue}</p>
       ) : (
-        <p style={{color:'#fff'}}>Enter a valid Station ID and click Fetch</p>
+        <p style={{color:'#fff'}}>AQI:</p>
       )}
       
     </div>

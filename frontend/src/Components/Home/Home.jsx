@@ -68,25 +68,31 @@ const Home = () => {
                 <hr /><hr />
                 <div className='body'>
                     <div className='calc'>
-                        <form onSubmit={calculate}>
-                            <label htmlFor="vehicle-type">Select Vehicle Type:</label>
-                            <select id="vehicle-type" onChange={(e) => setVehicleType(() => e.target.value)}>
-                                <option value="bike">Bike</option>
-                                <option value="petrol-car">Petrol Car</option>
-                                <option value="diesel-car">Diesel Car</option>
-                            </select>
-                            <label htmlFor="distance">Enter Distance (in km):</label>
-                            <input type="number" id="distance" value={distance} onChange={e => setDistance(() => e.target.value)} placeholder="Enter distance..." />
-                            <br /><br />
-                            <label htmlFor="engine-size">Select Engine Size (for cars only):</label>
-                            {(vehicleType === "petrol-car" || vehicleType === "diesel-car")&& <select id="engine-size" onChange={e => setEngineSize(() => e.target.value)}>
-                                <option value="small">Small</option>
-                                <option value="medium">Medium</option>
-                                <option value="large">Large</option>
-                            </select>}
+                        <form onSubmit={calculate} className='calcform'>
+                            <div>
+                                <label htmlFor="vehicle-type" className='vehicle-type'>Select Vehicle Type:</label>
+                                <select id="vehicle-type" onChange={(e) => setVehicleType(() => e.target.value)} className='vehicle-select'>
+                                    <option value="bike">Bike</option>
+                                    <option value="petrol-car">Petrol Car</option>
+                                    <option value="diesel-car">Diesel Car</option>
+                                </select>
+                            </div>
+                            <br /><div>
+                                <label htmlFor="distance" className='distance'>Enter Distance (in km):</label>
+                                <input type="number" id="distance" value={distance} onChange={e => setDistance(() => e.target.value)} placeholder="Enter distance..." className='distance-select' />
+                            </div> <br />
+                            <div>
+                                <label htmlFor="engine-size" className='enginesize'>Select Engine Size:</label>
+                                { <select id="engine-size" onChange={e => setEngineSize(() => e.target.value)} className='engine-select'>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                </select>}
+                            </div>
+                            <br/>
                             <button className='calc-submit'>Submit</button>
                         </form>
-                        <p className='calc-ans'>{footprint && footprint} g CO2/km</p>
+                        {footprint && <p className='calc-ans'>CO2 Emitted: {footprint} g CO2/km</p> }
                     </div>
                     <div className='facts'>
                         <div>

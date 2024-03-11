@@ -1,24 +1,50 @@
-.aqicomp{
-    background-color: rgb(45,45,45,.5);
+.aqicomp {
+    background-color: rgb(45, 45, 45, .5);
     box-shadow: 1px 1px 10px white;
     border-radius: 20px;
-    height: 150px;
+    height: 200px;
     align-items: center;
     margin-top: 28px;
+    font-size: medium;
 }
-.aqihead{
+
+.aqihead {
     padding-top: 20px;
 }
 
-.aqi_input{
-    background-color: rgb(30,30,30);
+.aqi_input {
+    background-color: rgb(30, 30, 30);
     margin-left: 10px;
-    border: rgb(45,45,45,.5) solid;
+    border: rgb(45, 45, 45, .5) solid;
     border-radius: 10px;
     padding: 5px;
-    color: white; 
+    color: white;
+    box-shadow: 1px 1px 10px #ddd;
+    width: 100px;
+
 }
 
-.aqi-value{
-    margin-right: 30px;
+.aqi-value {
+    margin-top: 25px;
+}
+
+.aqi-submit {
+    cursor: pointer;
+
+    border: none;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 7px #38d39f70;
+
+    background: #38d39f;
+    color: rgba(255, 255, 255, 0.8);
+    width: 70px;
+    margin-left: 10px;
+    height: 30px;
+    transition: all 1s;
+}
+
+.aqi-submit:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px #ddd;
 }

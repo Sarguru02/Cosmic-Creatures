@@ -1,5 +1,7 @@
 .home{
     color: #ddd;
+    background-image: url('/bg.jpeg');
+    height: 100%;
     height: 98vh;
 }
 
@@ -16,7 +18,14 @@
     border-radius: 20px;
     box-shadow: 1px 1px 10px #ddd ;
     background-color: rgb(48,48,48,.5);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   font-size: 25px;
+   line-height: 80px;
+    height: 70vh;
+    backdrop-filter: blur(5px);
 }
 .factshead{
     padding-top: 10px;
@@ -28,7 +37,8 @@
     box-shadow: 1px 1px 10px #ddd ;
     background-color: rgb(48,48,48,.5);
     justify-content: center;
-    
+    backdrop-filter: blur(5px);
+
 }
 .facts{
     border: 2px ;
@@ -45,6 +55,8 @@
     border-radius: 20px;
     box-shadow: 1px 1px 10px #ddd ;
     background-color: rgb(48,48,48,.5);
+    backdrop-filter: blur(5px);
+
 }
 .header{
     height: 100px;
@@ -72,6 +84,7 @@
     background-color: rgb(255,255,255,0);
     color: #ddd;
     font-size: 20px;
+    backdrop-filter: blur(5px);
 }
 
 .login:hover, .signup:hover{
@@ -81,4 +94,59 @@
 
 hr{
     margin: 2px;
+}
+
+.vehicle-select,.distance-select,.engine-select{
+    height: 30px;
+    background-color: rgb(48,48,48,.5);
+    color: white;
+    border: 1px white solid;
+    font-size: 16px;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 5px
+}
+.calcform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:500px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    line-height: 50px;
+    border: 2px  solid white;
+    box-shadow: 1px 1px 10px #ddd ;
+}
+
+.calc-submit{
+    cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: 2px 2px 7px #38d39f70;
+
+  background: #38d39f;
+  color: rgba(255, 255, 255, 0.8);
+
+  width: 80px;
+    height: 40px;
+  transition: all 1s;
+}
+.calc-submit:hover{
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px #ddd ;
+}
+
+.calc-ans{
+    width:500px;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 50px;
+    border: 2px  solid white;
+    text-align: center;
+    box-shadow: 1px 1px 10px #ddd ;   
 }
