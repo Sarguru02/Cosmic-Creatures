@@ -12,35 +12,35 @@ export default function Signup() {
     console.log(email, password, confirmpassword, firstname, lastname);
     }
 
-    return <div className="flex-container">
-        <div className="content-container">
-            <div className="form-container">
+    return <div className="signup-flex-container">
+        <div className="signup-content-container">
+            <div className="signup-form-container">
                 <form onSubmit={handleSubmit}>
-                    <h1 className="heading">
+                    <h1 className="signup-heading">
                         Signup
                     </h1>
                     <br />
                     <br />
-                    <span className="subtitle">EMAIL:</span>
+                    <span className="signup-subtitle">EMAIL:</span>
                     <br />
-                    <input type="email" className="input-type" value={email} onChange={(e)=> setEmail(() => e.target.value)} name="username"/>
+                    <input type="email" className="signup-input-type" value={email} onChange={(e)=> setEmail(() => e.target.value)} name="username"/>
                     <br />
-                    <span className="subtitle">First Name:</span>
+                    <span className="signup-subtitle">First Name:</span>
                     <br />
-                    <input type="text" className="input-type" value={firstname} onChange={(e)=> setFirstname(() => e.target.value)} name="username"/>
+                    <input type="text" className="signup-input-type" value={firstname} onChange={(e)=> setFirstname(() => e.target.value)} name="username"/>
                     <br />
-                    <span className="subtitle">Last Name:</span>
+                    <span className="signup-subtitle">Last Name:</span>
                     <br />
-                    <input type="text" className="input-type" value={lastname} onChange={(e)=> setLastname(() => e.target.value)} name="username"/>
+                    <input type="text" className="signup-input-type" value={lastname} onChange={(e)=> setLastname(() => e.target.value)} name="username"/>
                     <br />
-                    <span className="subtitle">PASSWORD:</span>
+                    <span className="signup-subtitle">PASSWORD:</span>
                     <br />
-                    <input type="password" className="input-type" name="password" value={password} onChange={e => setPassword(()=>e.target.value)} />
-                    <br /><span className="subtitle">Confirm Password:</span>
+                    <input type="password" className="signup-input-type" name="password" value={password} onChange={e => setPassword(()=>e.target.value)} />
+                    <br /><span className="signup-subtitle">Confirm Password:</span>
                     <br />
-                    <input type="password" className="input-type" name="password" value={confirmpassword} onChange={e => setConfirmPassword(()=>e.target.value)} />
+                    <input type="password" className="signup-input-type" name="password" value={confirmpassword} onChange={e => setConfirmPassword(()=>e.target.value)} />
                     <br /><br />
-                    <input readOnly={true} type="submit" value="SUBMIT" className="input-type submit-btn" />
+                    <input readOnly={true} type="submit" value="SUBMIT" className="signup-input-type submit-btn" />
                 </form>
             </div>
         </div>

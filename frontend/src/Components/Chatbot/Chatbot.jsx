@@ -18,7 +18,7 @@ const Chatbot = () => {
 
     return (
         <div className='Chatbot'>
-            <Popup trigger={<button className='cbicon'>click</button>} modal nested>
+            <Popup trigger={<button className='cbicon'>Chat</button>} modal nested>
                 {
                     close => (
                         <div className='modal'>
