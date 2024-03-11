@@ -56,7 +56,7 @@
     margin-left: 50px;
     font-size: 2.5rem;
 }
-.button{
+.button-holder{
     position: absolute;
     right:0;
     top: 35px;
@@ -72,6 +72,11 @@
     background-color: rgb(255,255,255,0);
     color: #ddd;
     font-size: 20px;
+}
+
+.login:hover, .signup:hover{
+    cursor:pointer;
+    box-shadow: 1px 1px 10px #ddd ;
 }
 
 hr{
