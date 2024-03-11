@@ -2,12 +2,42 @@ import React from 'react'
 import './Home.css';
 import Chatbot from '../Chatbot/Chatbot';
 import { useNavigate } from 'react-router-dom';
-
+import AqiComponent from '../AqiComponent/AqiComponent';
 const Home = () => {
     const navigate = useNavigate();
 
     const login = () => navigate('/login');
     const signup = () => navigate('/signup');
+    const ecoFacts = [
+        'Recycling one aluminum can saves enough energy to run a TV for three hours.',
+        'Over 1 million seabirds and 100,000 marine animals die from plastic pollution annually.',
+        'The Great Barrier Reef is the largest living structure on Earth but is under threat due to climate change.',
+        'Planting trees is a simple way to combat climate change as they absorb CO2.',
+        "The fashion industry is responsible for 10% of the world's carbon emissions.",
+        'Bees are essential pollinators for many crops, but their populations are declining.',
+        'A vegetarian diet has a smaller carbon footprint compared to a meat-based diet.',
+        'The amount of electronic waste (e-waste) generated globally is increasing rapidly.',
+        'Fast fashion contributes to water pollution and unethical labor practices.',
+        "The Amazon rainforest produces 20% of the world's oxygen.",
+        'Solar energy is a clean and renewable source of power.',
+        'The ozone layer is gradually recovering due to international efforts to reduce ozone-depleting substances.',
+        'Electric vehicles produce fewer emissions than traditional gasoline-powered cars.',
+        'Overfishing is depleting global fish populations and harming marine ecosystems.',
+        "The world's largest landfill is in the Pacific Ocean, known as the Great Pacific Garbage Patch.",
+        'Composting kitchen waste reduces methane emissions from landfills.',
+        'The production of one ton of paper contributes to 17 trees being cut down.',
+        'The average shower uses 2.5 gallons of water per minute.',
+        'Bamboo is a sustainable alternative to traditional wood due to its rapid growth.',
+        'The Paris Agreement aims to limit global temperature increases to well below 2 degrees Celsius.',
+        'Microplastics have been found in remote areas, including the Arctic and Antarctica.',
+        'Food waste contributes to methane emissions in landfills.',
+        'Wetlands play a crucial role in filtering water and providing habitat for diverse species.',
+        'The concept of a circular economy promotes recycling and reusing materials to reduce waste.',
+        'The production of a single hamburger requires a large amount of water and contributes to deforestation.'
+      ];
+      
+      const randomIndex = Math.floor(Math.random() * ecoFacts.length);
+      console.log(ecoFacts[randomIndex]);
     return (
         <>
             <div className='home'>
@@ -24,16 +54,10 @@ const Home = () => {
                     </div>
                     <div className='facts'>
                         <div>
+                            <AqiComponent />
                             <h1 className='factshead'>Fun Facts</h1>
                             <p className='factscontent'>
-                                Lorem ipsum dolor sit amet. Ut labore reiciendis sit earum libero et unde quod et
-                                voluptas accusamus ex corporis adipisci et officiis illum rem repellat earum? Aut
-                                quis commodi aut velit pariatur nam laborum minus.Aut tenetur voluptas aut distinctio
-                                sit porro autem quo inventore vitae. Sed fugiat voluptate est rerum nostrum ut iure
-                                voluptatem qui eveniet nulla est voluptatibus galisum aut sint cumque ut dolorem
-                                quibusdam. A cumque pariatur est ducimus doloribus sit aliquam cumque et autem natus
-                                sed omnis necessitatibus ut galisum unde? Ea aliquam voluptas ut quia voluptatibus et
-                                voluptas omnis ut saepe quos.
+                                {ecoFacts[randomIndex]}
 
                             </p>
                         </div>
