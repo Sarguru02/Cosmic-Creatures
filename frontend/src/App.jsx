@@ -6,6 +6,7 @@ import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import AqiComponent from './Components/AqiComponent/AqiComponent';
 import { Dashboard } from './Components/Dashboard/Dashboard';
+import Landing from './Components/Landing/Landing';
 
 axios.defaults.baseURL = 'http://localhost:8000/'
 axios.defaults.headers = {
@@ -18,7 +19,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/AqiComponent" element={<AqiComponent />} />
-      <Route path='/test' element={<Dashboard />} />
+      <Route path="/home" element={<Landing />} />
+      <Route path='/dashboard' element={<Dashboard />} />
     </Routes>
   );
 }

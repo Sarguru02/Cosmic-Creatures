@@ -10,7 +10,7 @@ export default function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         login(username, password)
-        navigate("/test")
+        navigate("/dashboard")
     }
 
     return <div className="flex-container">
