@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "./Login.css"
+import { login } from "../../utils/login";
+import { useNavigate } from "react-router-dom";
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(username, password);
+        login(username, password)
+        navigate("/test")
     }
 
     return <div className="flex-container">

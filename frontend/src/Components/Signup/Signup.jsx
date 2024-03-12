@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Signup.css"
+import { signup } from "../../utils/login";
 export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -9,7 +10,12 @@ export default function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email, password, confirmpassword, firstname, lastname);
+        if (password !== confirmpassword) {
+            alert("Passwords do not match");
+            return;
+        }
+        signup(email, password)
+        navigate("/test")
     }
 
     return <div className="signup-flex-container">

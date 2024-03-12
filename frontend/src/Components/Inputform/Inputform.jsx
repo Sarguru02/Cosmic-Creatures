@@ -1,15 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./InputForm.css"
+import { checkLogin } from '../../utils/login';
+import { useNavigate } from 'react-router-dom';
+import { putUserData } from '../../utils/db';
 const Inputform = () => {
     const [vehicleType, setVehicleType] = useState('bike');
     const [distance, setDistance] = useState(0);
     const [engineSize, setEngineSize] = useState('small');
     const [actype, setActype] = useState('1*');
     const [actime, setActime] = useState(0);
+    const navigate = useNavigate()
 
+    useEffect(()=>{
+        if(!checkLogin()){
+            return navigate("/")
+        } 
+    },[])
 
     const formhandlesubmit = (e) => {
         e.preventDefault();
+        const data = {
+            vehicleType,
+            distance,
+            engineSize,
+            actype,
+            actime
+        }
+        putUserData(data)
     }
 
 
