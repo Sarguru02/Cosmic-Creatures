@@ -43,11 +43,11 @@ const Inputform = () => {
                             <option value="large">Large{vehicleType === "bike" && " (>350cc)"}{vehicleType != "bike" && " (SUVs)"}</option>
                         </select>}
                         <select className='form-ACtype' onChange={e => setActype(() => e.target.value)} >
-                            <option>1*</option>
-                            <option>2*</option>
-                            <option>3*</option>
-                            <option>4*</option>
-                            <option>5*</option>
+                            <option>1 ⭐</option>
+                            <option>2 ⭐</option>
+                            <option>3 ⭐</option>
+                            <option>4 ⭐</option>
+                            <option>5 ⭐</option>
                         </select>
                         <input type='number' className='form-ACuse' value={actime} onChange={e => setActime(() => e.target.value)} placeholder='Enter AC Time...' />
                     </div>
