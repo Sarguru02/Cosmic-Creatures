@@ -4,8 +4,8 @@ import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
-import Test from './Components/Test';
 import AqiComponent from './Components/AqiComponent/AqiComponent';
+import Inputform from './Components/Inputform/Inputform';
 
 axios.defaults.baseURL = 'http://localhost:8000/'
 axios.defaults.headers = {
@@ -13,12 +13,13 @@ axios.defaults.headers = {
 }
 function App() {
   return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/AqiComponent" element={<AqiComponent />} />
-        </Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/AqiComponent" element={<AqiComponent />} />
+      <Route path='/test' element={<Inputform />} />
+    </Routes>
   );
 }
 

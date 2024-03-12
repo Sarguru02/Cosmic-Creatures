@@ -51,7 +51,7 @@ const ProgressCard = ({
               textAnchor="middle"
               className="circle-text"
               style={{ fill: colour }}
-              //   color={colour}
+            //   color={colour}
             >
               {Math.floor(percentage)}%
             </text>

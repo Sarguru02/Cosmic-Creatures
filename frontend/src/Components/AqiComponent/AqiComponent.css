@@ -2,7 +2,7 @@
     background-color: rgb(45, 45, 45, .5);
     box-shadow: 1px 1px 10px white;
     border-radius: 20px;
-    height: 200px;
+    height: 150px;
     align-items: center;
     margin-top: 28px;
     font-size: medium;
@@ -12,6 +12,7 @@
 
 .aqihead {
     padding-top: 20px;
+    font-size: 20px;
 }
 
 .aqi_input {

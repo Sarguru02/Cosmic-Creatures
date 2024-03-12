@@ -5,7 +5,7 @@ import chat from '../../utils/chat';
 
 const Chatbot = () => {
     const [value, setvalue] = useState('');
-    const [messages, setMessages] = useState([{message: "Hi, I am Phoenix - An Eco friendly Chatbot. How can I help you?", type:"bot"}]);
+    const [messages, setMessages] = useState([{ message: "Hi, I am Phoenix - An Eco friendly Chatbot. How can I help you?", type: "bot" }]);
 
     async function handlesubmit(e) {
         e.preventDefault();

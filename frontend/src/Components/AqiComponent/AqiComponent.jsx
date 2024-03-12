@@ -28,8 +28,8 @@ const AqiComponent = () => {
 
   return (
     <div className='aqicomp'>
-      <h2 style={{color:'#fff'}} className='aqihead'>Air Quality Index (AQI) Data</h2>
-      <label style={{color:'#fff'}} htmlFor="stationIdInput">Enter City </label>
+      <h2 style={{ color: '#fff' }} className='aqihead'>Air Quality Index (AQI) Data</h2>
+      <label style={{ color: '#fff' }} htmlFor="stationIdInput">Enter City </label>
       <input className='aqi_input'
         type="text"
         id="stationIdInput"
@@ -39,11 +39,11 @@ const AqiComponent = () => {
       />
       <button type="button" onClick={fetchData} className='aqi-submit'>Get Data</button>
       {aqiValue !== null ? (
-        <p style={{color:'#fff'}} className='aqi-value'>AQI: {aqiValue}</p>
+        <p style={{ color: '#fff' }} className='aqi-value'>AQI: {aqiValue}</p>
       ) : (
-        <p style={{color:'#fff'}}>AQI:</p>
+        <p style={{ color: '#fff' }}>AQI:</p>
       )}
-      
+
     </div>
   );
 };

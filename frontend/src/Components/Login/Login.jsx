@@ -5,8 +5,8 @@ export default function Login() {
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(username, password);
+        e.preventDefault();
+        console.log(username, password);
     }
 
     return <div className="flex-container">
@@ -20,11 +20,11 @@ export default function Login() {
                     <br />
                     <span className="subtitle">USERNAME:</span>
                     <br />
-                    <input type="text" className="input-type" value={username} onChange={(e)=> setUsername(() => e.target.value)} name="username"/>
+                    <input type="text" className="input-type" value={username} onChange={(e) => setUsername(() => e.target.value)} name="username" />
                     <br />
                     <span className="subtitle">PASSWORD:</span>
                     <br />
-                    <input type="password" className="input-type" name="password" value={password} onChange={e => setPassword(()=>e.target.value)} />
+                    <input type="password" className="input-type" name="password" value={password} onChange={e => setPassword(() => e.target.value)} />
                     <br /><br />
                     <input readOnly={true} type="submit" value="SUBMIT" className="input-type submit-btn" />
                 </form>

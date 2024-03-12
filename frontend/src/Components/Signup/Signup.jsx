@@ -8,8 +8,8 @@ export default function Signup() {
     const [lastname, setLastname] = useState('');
 
     const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email, password, confirmpassword, firstname, lastname);
+        e.preventDefault();
+        console.log(email, password, confirmpassword, firstname, lastname);
     }
 
     return <div className="signup-flex-container">
@@ -23,22 +23,22 @@ export default function Signup() {
                     <br />
                     <span className="signup-subtitle">EMAIL:</span>
                     <br />
-                    <input type="email" className="signup-input-type" value={email} onChange={(e)=> setEmail(() => e.target.value)} name="username"/>
+                    <input type="email" className="signup-input-type" value={email} onChange={(e) => setEmail(() => e.target.value)} name="username" />
                     <br />
                     <span className="signup-subtitle">First Name:</span>
                     <br />
-                    <input type="text" className="signup-input-type" value={firstname} onChange={(e)=> setFirstname(() => e.target.value)} name="username"/>
+                    <input type="text" className="signup-input-type" value={firstname} onChange={(e) => setFirstname(() => e.target.value)} name="username" />
                     <br />
                     <span className="signup-subtitle">Last Name:</span>
                     <br />
-                    <input type="text" className="signup-input-type" value={lastname} onChange={(e)=> setLastname(() => e.target.value)} name="username"/>
+                    <input type="text" className="signup-input-type" value={lastname} onChange={(e) => setLastname(() => e.target.value)} name="username" />
                     <br />
                     <span className="signup-subtitle">PASSWORD:</span>
                     <br />
-                    <input type="password" className="signup-input-type" name="password" value={password} onChange={e => setPassword(()=>e.target.value)} />
+                    <input type="password" className="signup-input-type" name="password" value={password} onChange={e => setPassword(() => e.target.value)} />
                     <br /><span className="signup-subtitle">Confirm Password:</span>
                     <br />
-                    <input type="password" className="signup-input-type" name="password" value={confirmpassword} onChange={e => setConfirmPassword(()=>e.target.value)} />
+                    <input type="password" className="signup-input-type" name="password" value={confirmpassword} onChange={e => setConfirmPassword(() => e.target.value)} />
                     <br /><br />
                     <input readOnly={true} type="submit" value="SUBMIT" className="signup-input-type submit-btn" />
                 </form>

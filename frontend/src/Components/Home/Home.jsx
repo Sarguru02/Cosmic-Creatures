@@ -84,15 +84,16 @@ const Home = () => {
                             <div>
                                 <label htmlFor="engine-size" className='enginesize'>Select Engine Size:</label>
                                 { <select id="engine-size" onChange={e => setEngineSize(() => e.target.value)} className='engine-select'>
-                                    <option value="small">Small</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="large">Large</option>
+                                    <option value="small">Small{vehicleType==="bike" && " (<150cc)"}{vehicleType!="bike" && " (Mini)"}</option>
+                                    <option value="medium">Medium{vehicleType==="bike" && " (150-350cc)"}{vehicleType!="bike" && " (Sedan)"}</option>
+                                    <option value="large">Large{vehicleType==="bike" && " (>350cc)"}{vehicleType!="bike" && " (SUVs)"}</option>
                                 </select>}
                             </div>
                             <br/>
                             <button className='calc-submit'>Submit</button>
                         </form>
-                        {footprint && <p className='calc-ans'>CO2 Emitted: {footprint} g CO2/km</p> }
+                        {footprint && <div><p className='calc-ans'>CO2 Emitted: {footprint} g CO2</p>
+                        </div> }
                     </div>
                     <div className='facts'>
                         <div>

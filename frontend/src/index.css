@@ -1,4 +1,4 @@
-:root{
+:root {
   margin: 0;
   background-color: #000;
   padding: 0px;
@@ -29,6 +29,6 @@ html {
   padding: 0;
 }
 
-.calcform >select{
+.calcform>select {
   margin-left: 100px;
 }
