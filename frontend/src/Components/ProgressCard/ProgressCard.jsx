@@ -53,7 +53,7 @@ const ProgressCard = ({
               style={{ fill: colour }}
             //   color={colour}
             >
-              {Math.floor(percentage)}%
+              {Math.floor(percentage)}
             </text>
           </svg>
         </div>
