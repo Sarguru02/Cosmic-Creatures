@@ -23,12 +23,15 @@ export const Dashboard = () => {
     
     return (
          <div className='dashboard-main'>
-             {userdata && <div className='dashboard-progress'>
-                <ProgressCard percentage={userdata['fetchingData']['distance']*2} type='Distance travelled' />
-                <ProgressCard percentage={findsize(userdata)}type='Engine type'/>
-                <ProgressCard type='AC type' percentage={findac(userdata)*20}/>
-                <ProgressCard type='AC usage' percentage={userdata['fetchingData']['actime']*100/24}/>
-            </div>}
+             {userdata && <div>
+                    <h2  className='dashboard-title'>Your Progress</h2>
+                 <div className='dashboard-progress' align='center'>
+                    <ProgressCard percentage={userdata['fetchingData']['distance']} type='Distance travelled' />
+                    <ProgressCard percentage={findsize(userdata)}type='Engine type'/>
+                    <ProgressCard type='AC type' percentage={findac(userdata)*20}/>
+                    <ProgressCard type='AC usage' percentage={userdata['fetchingData']['actime']*100/24}/>
+                             </div>
+             </div>}
             <div className='dashboard-charts'>
                 <div className='dashboard-linechart' align='center'>
                     <h2>Your Score</h2>

@@ -54,7 +54,7 @@ const ProgressCard = ({
               style={{ fill: colour }}
             //   color={colour}
             >
-              {(type==="Distance travelled") && (Math.floor(percentage)/2+"km") }{type==="Engine type" && ((percentage===33 && "S") || (percentage===66 && "M")||(percentage===100 && "L") )}
+              {(type==="Distance travelled") && (Math.floor(percentage)+"km") }{type==="Engine type" && ((percentage===33 && "S") || (percentage===66 && "M")||(percentage===100 && "L") )}
               {type==="AC type" && (percentage/20)+"*"}{ type==="AC usage" && (percentage1*24/100)+"hr"}
             </text>
           </svg>

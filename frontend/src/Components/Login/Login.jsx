@@ -22,7 +22,7 @@ export default function Login() {
                     </h1>
                     <br />
                     <br />
-                    <span className="subtitle">USERNAME:</span>
+                    <span className="subtitle">EMAIL:</span>
                     <br />
                     <input type="text" className="input-type" value={username} onChange={(e) => setUsername(() => e.target.value)} name="username" />
                     <br />
