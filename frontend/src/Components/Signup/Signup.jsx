@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./Signup.css"
 import { signup } from "../../utils/login";
+import { useNavigate } from "react-router-dom";
 export default function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,7 +17,7 @@ export default function Signup() {
             return;
         }
         signup(email, password)
-        navigate("/test")
+        navigate("/getUserData")
     }
 
     return <div className="signup-flex-container">

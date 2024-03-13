@@ -38,11 +38,9 @@ const AqiComponent = () => {
         placeholder="Enter City Name"
       />
       <button type="button" onClick={fetchData} className='aqi-submit'>Get Data</button>
-      {aqiValue !== null ? (
+      {aqiValue !== null && (
         <p style={{ color: '#fff' }} className='aqi-value'>AQI: {aqiValue}</p>
-      ) : (
-        <p style={{ color: '#fff' }}>AQI:</p>
-      )}
+            )}
 
     </div>
   );

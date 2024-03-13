@@ -1,0 +1,4 @@
+- Redesign dashboard
+- before data, some styling is needed
+- Redesign local storage to store data in a better way : like firebase or JSON file
+- use fastapi for running the machine learning model as an api 😭

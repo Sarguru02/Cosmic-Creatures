@@ -3,7 +3,7 @@ import "./InputForm.css"
 import { checkLogin } from '../../utils/login';
 import { useNavigate } from 'react-router-dom';
 import { putUserData } from '../../utils/db';
-const Inputform = () => {
+export default function Inputform(){
     const [vehicleType, setVehicleType] = useState('bike');
     const [distance, setDistance] = useState(0);
     const [engineSize, setEngineSize] = useState('small');
@@ -75,4 +75,3 @@ const Inputform = () => {
     )
 }
 
-export default Inputform;

@@ -35,14 +35,6 @@ const Home = () => {
     return (
         <>
             <div className='home'>
-                <div className='header'>
-                    <h1 className='PN'>EcoCalc</h1>
-                    <div className='button-holder'>
-                        <button onClick={login} className='login'>Login</button>
-                        <button onClick={signup} className='signup'>Signup</button>
-                    </div>
-                </div>
-                <hr /><hr />
                 <div className='body'>
                     <div className='calc'>
                         <form onSubmit={calculate} className='calcform'>

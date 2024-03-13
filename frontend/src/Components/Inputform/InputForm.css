@@ -6,7 +6,6 @@
     display: grid;
     place-content: center;
     color: white;
-    background-image: url(bg.jpeg);
     font-size: 16px;
 }
 

@@ -1,6 +1,5 @@
 .home {
     color: #ddd;
-    background-image: url('/bg.jpeg');
     height: 100%;
     height: 98vh;
 }
@@ -144,7 +143,8 @@ hr {
 
     box-shadow: 2px 2px 7px #38d39f70;
 
-    background: #38d39f;
+    /*background: #38d39f;*/
+    background: green;
     color: rgba(255, 255, 255, 0.8);
 
     width: 80px;

@@ -1,39 +1,8 @@
 #landing {
-    height: 250vh;
+    height: 230vh;
     /* font-family: 'couriernew'; */
-    background-image: url('/bg.jpeg');
 }
 
-.header-one {
-
-    color: #fff;
-    /* Light text color */
-    padding: 1rem;
-    /* Add padding to the header */
-}
-
-.one {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-    height: 35px;
-    backdrop-filter: blur(5px);
-}
-
-
-
-.ecocalc {
-    font-size: 4rem;
-    font-weight: 400;
-}
-
-
-
-.one ul li a:hover {
-    text-decoration: none;
-    /* Underline links on hover */
-}
 
 .herocon {
     color: #fff;
@@ -56,7 +25,7 @@
     justify-content: center;
     font-size: 25px;
     line-height: 80px;
-    height:200vh;
+    height:220vh;
     backdrop-filter: blur(5px); 
 
 }
@@ -96,7 +65,7 @@
     border: 2px;
     border-radius: 20px;
     /* box-shadow: 1px 1px 10px #ddd; */
-    /* background-color: rgb(48, 48, 48, .5); */
+     background-color: rgb(48, 48, 48, .5); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,41 +90,3 @@
 
 
 
-.one{
-    display: flex;    align-items: center;
-    justify-content: space-between;
-}
-.one ul {
-    display: flex;
-}
-.one ul li {
-    list-style:none;
-    display:inline-block;
-    margin:0 20px;
-    position : relative;
-    
-}
-.one ul li a{
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: 1000;
-    margin: 1rem;
-    color:#ffff;
-    text-transform:uppercase;
-
-}
-.one ul li::after{
-    content:'';
-    height: 3.25px;
-    width: 0%;
-    background:green;
-    position: absolute;
-    left:0;
-    bottom: -10px;;
-    transition: 0.8s;
-}
-.one ul li:hover::after{
-    width:100%;
-    
-    
-}

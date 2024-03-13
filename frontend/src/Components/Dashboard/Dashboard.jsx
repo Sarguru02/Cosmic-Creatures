@@ -12,9 +12,6 @@ export const Dashboard = () => {
             return navigate("/login");
         }
     },[])
-    const styles = {
-        color: "black"
-    }
     return (
         <div className='dashboard-main'>
             <div className='dashboard-progress'>
