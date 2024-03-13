@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Popup from 'reactjs-popup';
+import chatLogo from "/robot-solid.svg"
 import './Chatbot.css'
 import chat from '../../utils/chat';
 
@@ -19,7 +20,7 @@ const Chatbot = () => {
     return (
         <div className='Chatbot'>
             <Popup trigger={<button className='cbicon'>
-                Chat
+                <img src={chatLogo} />
             </button>} modal nested>
                 {
                     close => (
