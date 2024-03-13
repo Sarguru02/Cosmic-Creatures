@@ -9,6 +9,7 @@ export default function Inputform(){
     const [engineSize, setEngineSize] = useState('small');
     const [actype, setActype] = useState('1*');
     const [actime, setActime] = useState(0);
+    const [cityname,setCityname]=useState();
     const navigate = useNavigate()
 
     useEffect(()=>{
@@ -24,8 +25,10 @@ export default function Inputform(){
             distance,
             engineSize,
             actype,
-            actime
+            actime,
+            cityname
         }
+        console.log(data)
         putUserData(data)
     }
 
@@ -35,6 +38,7 @@ export default function Inputform(){
             <form className='inputform-form' onSubmit={formhandlesubmit}>
                 <div className='form-div1'>
                     <div className='form-divlabel'>
+                        <label className='form-cityname'>Enter City Name</label>
                         <label htmlFor="vehicle-type" className='form-vehicle-type'>Select Vehicle Type:</label>
                         <br />
                         <label htmlFor="distance" className='form-distance'>Enter Distance <br />Travelled per Day(in km):</label>
@@ -48,6 +52,7 @@ export default function Inputform(){
 
                     </div>
                     <div className='form-divinput'>
+                        <input className='form-cityinput' type='text' placeholder='Enter city Name' onChange={(e) => setCityname(() => e.target.value)}/>
                         <select id="vehicle-type" onChange={(e) => setVehicleType(() => e.target.value)} className='form-vehicle-select'>
                             <option value="bike">Bike</option>
                             <option value="petrol-car">Petrol Car</option>

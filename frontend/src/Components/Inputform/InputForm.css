@@ -1,7 +1,7 @@
 .input-form-div {
     margin: 0;
     background-color: black;
-    height: 98vh;
+    height: 80vh;
     width: 100vw;
     display: grid;
     place-content: center;
@@ -10,7 +10,7 @@
 }
 
 .inputform-form {
-    height: 65vh;
+    height: 550px;
     width: 40vw;
     background-color: rgb(48, 48, 48, .5);
     display: grid;
@@ -29,7 +29,7 @@
 .form-distance-select,
 .form-engine-select,
 .form-ACuse,
-.form-ACtype {
+.form-ACtype,.form-cityinput {
     height: 30px;
     background-color: rgb(48, 48, 48, .5);
     color: white;
@@ -55,7 +55,7 @@
 .form-distance,
 .form-enginesize,
 .form-ac,
-.form-actime {
+.form-actime,.form-cityname {
     margin-top: 35px;
 }
 
