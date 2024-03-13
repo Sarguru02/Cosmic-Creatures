@@ -61,7 +61,8 @@ const Home = () => {
                             <br/>
                             <button className='calc-submit'>Submit</button>
                         </form>
-                        {footprint && <div><p className='calc-ans'>CO2 Emitted: {footprint} g CO2</p>
+                        {footprint && <div align='center'><p className='calc-ans'>CO2 Emitted: {footprint} g CO2</p>
+                        <p>Check out our chatbot to reduce Carbon emission</p>
                         </div> }
                     </div>
                     <div className='facts'>
