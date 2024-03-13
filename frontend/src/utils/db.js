@@ -9,7 +9,7 @@ export function getUserData() {
     const fulldb = JSON.parse(localStorage.getItem("database"));
     // find the user in the db and return the user object
     const user = fulldb.find(user => user[username]);
-    return user;
+    return user[username];
 }
 
 

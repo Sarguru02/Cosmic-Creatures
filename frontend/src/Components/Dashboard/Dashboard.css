@@ -4,7 +4,7 @@
 }
 .dashboard-main{
     background-color: black;
-    height: 158vh;
+    height: 120vh;
 }
 .dashboard-charts{
     display: flex;
@@ -14,10 +14,11 @@
     margin-left: 5vw;
     margin-right: 5vw;
     width: 40vw;
-    padding: 50px;
-    height: 50vh;
-    border: 2px solid black;
+    height: 600px;
+    border: 2px solid white;
     background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px white;
 }
 
 .dashboard-barchart svg, .dashboard-linechart svg {
