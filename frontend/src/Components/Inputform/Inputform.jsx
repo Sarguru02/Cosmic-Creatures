@@ -30,6 +30,7 @@ export default function Inputform(){
         }
         console.log(data)
         putUserData(data)
+        navigate('/dashboard')
     }
 
 
